@@ -1,28 +1,24 @@
 # Utility Functions for the Game
 import time, random
+from game_riddles import riddle_list, hint_list
 
-riddle_list = [
-    ["Ich bin nicht am Leben, aber ich wachse. Ich habe keine Lungen, aber ich brauche Luft. Was bin ich?", "Feuer"],
-    ["Zwei Väter und zwei Söhne gingen angeln. Jeder von ihnen fing einen Fisch, aber am Ende waren nur drei Fische im Korb. Wie ist das möglich?", "Ein Großvater, ein Sohn und ein Enkel"],
-    ["Du bist mein Sohn, aber ich bin nicht dein Vater. Wer hat das gesagt?", "Mutter"]
-]
+def riddle(x):
+    print(f"\n{riddle_list[x][0]}\n")
 
-hint_list = [
-    "Du siehst auf einer Wand einen brennenden Wald auf einem Gemälde.",
-    "Auf einem Gemälde an einer Wand erblickst du eine Familie, bestehend aus Männern. Einen Grauhaarigen Mann links, einen großen Braunhaarigen rechts und ihnen beiden steht ein Kind.",
-    "Du erblickst eine Statue einer Frau wie sie ein Bündel eines Babys im Arm hält."
-]
+def hint(y):
+    print(f"\n{hint_list[y]}\n")
 
-def riddle():
-    global riddle_number
-    riddle_number = (int(random.randint(0,len(riddle_list))))-1
-    print(f"\n{riddle_list[riddle_number][0]}\n")
-
-def hint():
-    print(f"\n{hint_list[riddle_number]}\n")
-
-def solve_riddle():
-    answer = input("Wie lautet die Antwort auf das Rätsel?")
+def solve_riddle(z):
+    player_answer = input("\nWie lautet die Antwort auf das Rätsel?\n")
+    correct_answer = riddle_list[z][1]
+    if player_answer == correct_answer:
+        print("Korrekt! Du hast das Rätsel erfolgreich gelöst!\n")
+        # riddle_list.remove[riddle_list[z]]
+        # hint_list.remove[z]
+        return False
+    else:
+        print("Das war leider nicht korrekt. Probiere es gerne erneut.")
+        return True
 
 def end_game():
     print("Das Game endet hier")
