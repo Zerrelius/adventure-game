@@ -12,6 +12,10 @@ def greeting():
     print("Anschließend erhältst du die Wahl in Richtung 'Norden', 'Süden', 'Osten' als auch 'Westen' weiter zu gehen.")
     print("Du kommst erst weiter wenn das Rätsel gelöst ist. Achte auf die Räume, sehe sie dir genau an und ache vielleicht auf Gegenstände die du mitnehmen kannst.")
     print("Acht auf Groß- und Kleinschreibung! Alle Zahlen müssen in Schriftform ausgeschrieben werden. Am Anfang musst du immer groß schreiben.")
+    print("Du musst nur die Lösung aufschreiben.")
+    print("Ein Beispiel:")
+    print("Rätsel: Was kann einen Raum füllen, nimmt aber keinen Platz ein?")
+    print("Licht")
 
 def enter_room():
     global room_number
