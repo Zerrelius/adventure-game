@@ -1,6 +1,6 @@
 # Main Part of: Die verlorene Schatzsuche
 import time, random
-from game_utils import riddle, hint, solve_riddle, end_game
+from game_utils import riddle, hint, solve_riddle, end_game, show_points
 from game_rooms import room_name, room_description
 from game_riddles import riddle_list
 
@@ -11,7 +11,7 @@ def greeting():
     print("Jede Kammer verlangt das du ein Rätsel lösen musst um weiter zu kommen.")
     print("Anschließend erhältst du die Wahl in Richtung 'Norden', 'Süden', 'Osten' als auch 'Westen' weiter zu gehen.")
     print("Du kommst erst weiter wenn das Rätsel gelöst ist. Achte auf die Räume, sehe sie dir genau an und ache vielleicht auf Gegenstände die du mitnehmen kannst.")
-    print("Acht auf Groß- und Kleinschreibung!")
+    print("Acht auf Groß- und Kleinschreibung! Alle Zahlen müssen in Schriftform ausgeschrieben werden. Am Anfang musst du immer groß schreiben.")
 
 def enter_room():
     global room_number
@@ -55,7 +55,8 @@ def main():
                     print("1. Dir das Rätsel ansehen")
                     print("2. Nach Hinweisen suchen")
                     print("3. Das Rätsel lösen")
-                    print("4. Zurück ins Hauptmenü. ACHTUNG: Dein Fortschritt wird NICHT gespeichert.")
+                    print("4. Deine aktuelle Punktezahl anzeigen")
+                    print("5. Zurück ins Hauptmenü. ACHTUNG: Dein Fortschritt wird NICHT gespeichert.")
                     print("-----")
                     do_choose = input("Was möchtest du tun?\n")
 
@@ -75,9 +76,13 @@ def main():
                                 print("-----\n")
 
                     elif do_choose == "4":
+                        show_points(1)
+                    
+                    elif do_choose == "5":
                         print("Das Spiel wird unterbrochen und du kommst zurück ins Hauptmenü.")
                         gameplay = False
                         break
+
                     else:
                         print("Bitte wähle zwischen 1, 2, 3 oder 4.")
 
