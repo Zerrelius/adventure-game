@@ -6,7 +6,7 @@ def riddle(x):
     print(f"\n{riddle_list[x][0]}\n")
 
 def hint(y):
-    print(f"\n{hint_list[y]}\n")
+    print(f"\n{riddle_list[y][2]}\n")
 
 def solve_riddle(z):
     player_answer = input("\nWie lautet die Antwort auf das Rätsel?\n").capitalize()
