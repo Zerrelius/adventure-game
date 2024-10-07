@@ -2,7 +2,7 @@
 import time, random
 from game_utils import riddle, hint, solve_riddle, end_game
 from game_rooms import room_name, room_description
-from game_riddles import riddle_list, hint_list
+from game_riddles import riddle_list
 
 def greeting():
     print("Herzlich Willkommen im Text Adventure: Die verloren Schatzsuche!")
@@ -11,6 +11,7 @@ def greeting():
     print("Jede Kammer verlangt das du ein Rätsel lösen musst um weiter zu kommen.")
     print("Anschließend erhältst du die Wahl in Richtung 'Norden', 'Süden', 'Osten' als auch 'Westen' weiter zu gehen.")
     print("Du kommst erst weiter wenn das Rätsel gelöst ist. Achte auf die Räume, sehe sie dir genau an und ache vielleicht auf Gegenstände die du mitnehmen kannst.")
+    print("Acht auf Groß- und Kleinschreibung!")
 
 def enter_room():
     global room_number

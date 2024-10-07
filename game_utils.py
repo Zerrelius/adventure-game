@@ -1,6 +1,6 @@
 # Utility Functions for the Game
 import time, random
-from game_riddles import riddle_list, hint_list
+from game_riddles import riddle_list
 
 def riddle(x):
     print(f"\n{riddle_list[x][0]}\n")
@@ -9,11 +9,13 @@ def hint(y):
     print(f"\n{riddle_list[y][2]}\n")
 
 def solve_riddle(z):
-    player_answer = input("\nWie lautet die Antwort auf das Rätsel?\n").capitalize()
+    player_answer = input("\nWie lautet die Antwort auf das Rätsel?\n")
     correct_answer = riddle_list[z][1]
+    print(correct_answer)
+    print(player_answer)
     if player_answer == correct_answer:
         print("\nKorrekt! Du hast das Rätsel erfolgreich gelöst!")
-        # riddle_list.remove[riddle_list[z]]
+        riddle_list.remove(riddle_list[z])
         # hint_list.remove[z]
         input("In welche Richtung möchtest du nun gehen? Norden, Süden, Westen oder Osten?\n")
         return False
